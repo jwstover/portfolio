@@ -13,13 +13,32 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "space-mono": ["Space Mono", "sans-serif"],
+        inter: ["Inter", "sans-serif"]
+      },
       colors: {
         brand: "#FD4F00",
       }
     },
   },
+  daisyui: {
+    themes: [{
+      mytheme: { 
+        "primary": "#dc2626",
+        "secondary": "#f97316",
+        "accent": "#facc15",
+        "neutral": "#57534e",
+        "base-100": "#120703",
+        "info": "#38bdf8",
+        "success": "#4ade80",
+        "warning": "#fde047",
+        "error": "#ef4444",
+      }
+    }]
+  },
   plugins: [
-    require("@tailwindcss/forms"),
+    require('daisyui'),
     // Allows prefixing tailwind classes with LiveView classes to add rules
     // only when LiveView classes are applied, for example:
     //
